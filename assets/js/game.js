@@ -1,3 +1,7 @@
+var timeLeft = 60;
+var timer = $("#timer");
+var timerId = setInterval(countdown, 1000);
+
 var score = 0;
 var radio0 = document.getElementsByName("pearl");
 var radio1 = document.getElementsByName("police");
@@ -9,11 +13,13 @@ var radio6 = document.getElementsByName("indians");
 var radio7 = document.getElementsByName("nahuatl");
 var radio8 = document.getElementsByName("pirate");
 var radio9 = document.getElementsByName("canibal");
+var button = $(".btn");
 
 
 
 
 function submit() {
+    $('#hide').hide();
     for (i = 0; i < radio0.length; i++) {
         if (radio0[i].checked) {
             var answer0 = radio0[i].value;
@@ -114,5 +120,17 @@ function submit() {
     if (answer9 === "Butterlies") {
         score++
     }
-    console.log("score: " + score);
+    clearTimeout(timerId);
+    timer.text("Score: " + score + "/10");
 }
+function countdown() {
+    if (timeLeft == 0) {
+      clearTimeout(timerId);
+      submit();
+      timer.text("Score: " + score + "/10");
+      $('#hide').hide();
+    } else {
+        timer.text(timeLeft + " seconds ");
+      timeLeft--;
+    }
+  }

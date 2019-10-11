@@ -14,7 +14,15 @@
 </head>
 
 <body>
-
+    <div class="row sticky-top">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    Time Remaining: <div id="timer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class=jumbotron><strong>TRIVIA GAME</strong></div>
     <div class="card">
         <div class="card-header">
@@ -22,13 +30,15 @@
         </div>
 
         <div class="form-check">
-            <input class="form-check-input" name="pearl" type="radio" value="Blaylock's jersey number" id="defaultCheck1">
+            <input class="form-check-input" name="pearl" type="radio" value="Blaylock's jersey number"
+                id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
                 Blaylock's jersey number
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" name="pearl" type="radio" value="How long you have to wait for the train in Seattle" id="defaultCheck1">
+            <input class="form-check-input" name="pearl" type="radio"
+                value="How long you have to wait for the train in Seattle" id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
                 How long you have to wait for the train in Seattle
             </label>
@@ -263,7 +273,8 @@
         </div>
 
         <div class="form-check">
-            <input class="form-check-input" name="pirate" type="radio" value="To hide the disgusting wound" id="defaultCheck1">
+            <input class="form-check-input" name="pirate" type="radio" value="To hide the disgusting wound"
+                id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
                 To hide the disgusting wound
             </label>
@@ -275,7 +286,8 @@
             </label>
         </div>
         <div class="form-check">
-            <input class="form-check-input" name="pirate" type="radio" value="To be able to see in the dark" id="defaultCheck1">
+            <input class="form-check-input" name="pirate" type="radio" value="To be able to see in the dark"
+                id="defaultCheck1">
             <label class="form-check-label" for="defaultCheck1">
                 To be able to see in the dark
             </label>
@@ -319,7 +331,7 @@
     </div>
     <br>
 
-    <button class="btn btn-secondary" onclick="submit()">Submit</button>
+    <button class="btn btn-secondary" onclick="submit()" id="hide">Submit</button>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
